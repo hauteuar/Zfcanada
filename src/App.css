@@ -1,0 +1,170 @@
+.fixed-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000; /* Changed to black */
+    color: #fff; /* Ensure text color is visible on the black background */
+    z-index: 1000;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+
+.header-content, .social-and-chat {
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.header-content {
+    flex-grow: 1;
+    justify-content: center; /* Center the navigation links */
+}
+
+.logo {
+    position: absolute;
+    left: 20px; /* Adjust based on your layout */
+    top: 10px; /* Adjust based on your layout */
+}
+
+nav ul {
+    display: flex;
+    list-style: none; /* Removes bullets from list items */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Aligns items properly without default margin */
+}
+
+    
+
+    nav ul li a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #00BFFF; /* Bright blue color */
+    }
+
+        nav ul li a:hover {
+            color: #FFFFFF; /* White color on hover for a bit of interaction */
+        }
+
+/* Further style your social links and chat link as needed */
+.social-links a {
+    margin: 0 5px; /* Space out social links */
+}
+
+.chat-link {
+    background-color: #007bff; /* Example background color */
+    color: white; /* Text color */
+    padding: 5px 10px; /* Padding inside the button */
+    text-decoration: none; /* Removes underline */
+    border-radius: 5px; /* Rounded corners for the chat link/button */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+}
+
+/* Ensure the main content is not hidden by the fixed header */
+body {
+    padding-top: 60px; /* Adjust this value based on your header's height */
+}
+/* App.css */
+
+.social-and-chat a {
+    font-size: 24px; /* Adjust size as needed */
+    margin-right: 16px; /* Adjust margin as needed */
+}
+
+.social-and-chat .chat-button {
+    font-size: 16px; /* Adjust size as needed */
+}
+
+.navigation ul li a {
+    font-size: 18px; /* Adjust link text size as needed */
+}
+
+
+.chat-button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+/* Ensure the chat-overlay itself doesn't have an unnecessarily high z-index that could interfere */
+.chat-overlay {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 300px;
+    height: 400px;
+    z-index: 1000; /* Keep this reasonable to ensure it's above other content but not conflicting within */
+}
+
+.chat-window {
+    padding: 20px;
+    position: relative; /* Ensure this creates a context for absolutely positioned children like close-chat */
+    z-index: 1; /* Ensure this is not higher than the close button if it's within the same stacking context */
+}
+
+.close-chat {
+    position: absolute;
+    top: 0; /* Adjust as needed */
+    right: 0; /* Adjust as needed */
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    z-index: 2; /* Ensure this is above .chat-window content */
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9; /* or any background color you prefer */
+    min-width: 160px; /* Adjust width as needed */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.login-modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.login-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 450px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }

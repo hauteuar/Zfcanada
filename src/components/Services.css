@@ -1,0 +1,59 @@
+.services-section {
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+}
+
+.services-container {
+    display: grid;
+    text-align:center;
+    grid-template-columns: repeat(3, 1fr); /* 3-column layout */
+    gap: 20px;
+}
+
+.services-heading {
+    text-align: center;
+    margin: 20px 0; /* Adjust margins as needed */
+}
+
+.visa-type {
+    background-color: #f0f0f0; /* Light background */
+    padding: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .visa-type:hover {
+        background-color: #007bff; /* Color changes on hover */
+        color: #ffffff;
+    }
+
+    .visa-type button {
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 50%;
+}
+
+    .overlay-content button {
+        display: block;
+        margin-top: 20px;
+    }
