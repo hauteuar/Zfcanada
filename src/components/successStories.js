@@ -14,13 +14,13 @@ const successStories = [
     {
         id: 1,
         clientName: "Tareq Hadhad",
-        image: 'images/suc_imag1.jpg',
+        image: 'images/suc_image1.jpg',
         text: ' Tareq Hadhad and his family were Syrian refugees who resettled in Antigonish, Nova Scotia. In Syria, the Hadhad family owned a chocolate factory, which was destroyed in a bombing. Starting anew in Canada, they founded Peace by Chocolate, a company that quickly grew from a small local business to a nationally recognized brand. Tareq’s story is not just one of business success but also of community engagement and philanthropy, as the Hadhad family has committed to hiring and supporting other refugees and contributing to community projects.',
     },
     {
         id: 2,
         clientName: "Satish Kanwar",
-        image: 'images/suc_imag1.jpg',
+        image: 'images/suc_image2.jpg',
         text: 'Born in India and raised in Canada, Satish Kanwar is a testament to the potential of immigrants in the tech industry. He co-founded Jet Cooper, a user experience and design agency, in his early 20s. The company was acquired by Shopify, one of Canada’s biggest tech success stories, where Kanwar played a pivotal role in the company’s exponential growth. His journey reflects the potential of Canada’s tech industry to be enriched by immigrant talent, fostering innovation and global competitiveness.',
     },
     {
@@ -33,7 +33,7 @@ const successStories = [
     {
         id: 4,
         clientName: "Client Name 4",
-        image: 'images/news1.webp',
+        image: 'images/suc_image3.jpg',
         text: 'Success Story 4.',
     },
     // Add more stories as needed
@@ -42,6 +42,8 @@ const successStories = [
 
 function SuccessStoriesSlider() {
     return (
+        <div>
+        <h1> Our Success Stories </h1>
         <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={30}
@@ -59,7 +61,8 @@ function SuccessStoriesSlider() {
                     </div>
                 </SwiperSlide>
             ))}
-        </Swiper>
+            </Swiper>
+        </div>
     );
 }
 
