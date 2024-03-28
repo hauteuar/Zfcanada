@@ -36,10 +36,11 @@ function DisplayNews() {
 
     return (
         <div id="news-alerts">
+            <h1> Latest Canadian Immigration News and Alerts</h1>
             {articles.map((article) => (
                 <div key={article.id}>
                     <h2>{article.title}</h2>
-                    <img src={article.imageUrl} alt={article.title} style={{ maxWidth: "100%" }} />
+                    <img src={article.imageUrl} alt={article.title} style={{ maxWidth: "60%" }} />
                     <p>Synopsis: {article.synopsis}</p>
                     <button onClick={() => fetchDocumentText(article.detailUrl)}>Read More</button>
                 </div>
