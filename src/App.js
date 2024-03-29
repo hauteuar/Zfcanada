@@ -1,15 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
-import { Link } from 'react-scroll'; // For smooth scrolling
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
+import Header from './components/Header';
 import './App.css';
-import Home from './components/Home';
+
 import AdminPage from './components/AdminPage';
 import LoginModal from './components/LoginPage'; // Assuming this is your login modal component
 import ChatClient from './components/ChatClient';
 import { AuthProvider, useAuth } from './context/AuthContext';
+import Homepage from './components/Homepage';
+import CRSForm from './components/CRSForm';
+import Consultation from './components/ConsultationForm';
+import NewsAlerts from './components/NewsAlerts';
+import Footer from './components/Footer';
+
 
 // Create a function to use the useLocation hook
 function withRouter(Component) {
@@ -24,7 +28,7 @@ function withRouter(Component) {
 }
 
 function App({ location }) {
-    const [isChatOpen, setIsChatOpen] = useState(true);
+    const [isChatOpen, setIsChatOpen] = useState(false);
     const [setIsAdmin] = useState(false);
     const [showLoginModal, setShowLoginModal] = useState(false);
 
@@ -42,31 +46,15 @@ function App({ location }) {
 
     return (
         <>
-            <header className="fixed-header">
-                <div className="logo-container">
-                    <img src="logo.png" alt="Logo" className="logo" />
-                </div>
-                <nav className="navigation">
-                    <ul>
-
-                        <li><Link to="home" smooth={true} duration={500}>Home</Link></li>
-                        <li><Link to="about-us" smooth={true} duration={500}>About Us</Link></li>
-                        <li><Link to="services" smooth={true} duration={500}>Services</Link></li>
-                        <li><Link to="sucess" smooth={true} duration={500}>Success Stories</Link></li>
-                        <li><Link to="contact-us" smooth={true} duration={500}>Contact Us</Link></li>
-                        <li><Link to="news-alerts" smooth={true} duration={500}>News & Alerts</Link></li>
-                        
-                    </ul>
-                </nav>
-                <div className="social-and-chat">
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} /></a>
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFacebook} /></a>
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faInstagram} /></a>
-                    <button onClick={toggleChat} className="chat-button">Chat With Us</button>
-                </div>
-            </header>
+         
+            <Header />
+            
             <Routes>
-                <Route path="/" element={<Home />} />
+                
+                <Route path="/" element={<Homepage />} />
+                <Route path="/free-assessment" element={<CRSForm />} />
+                <Route path="/consultation" element={<Consultation />} />
+                <Route path="/news-alerts" element={<NewsAlerts />} />
                 <Route path="/admin" element={
                     isAuthenticated ? <AdminPage /> : <Navigate to="/login" />
                 } />
@@ -75,6 +63,7 @@ function App({ location }) {
 
                 {/* Other routes */}
             </Routes>
+            <Footer />
             {isChatOpen && <ChatOverlay onClose={toggleChat} />}
             {showLoginModal && <LoginModal setIsAdmin={setIsAdmin} setShowModal={setShowLoginModal} />}
         </>

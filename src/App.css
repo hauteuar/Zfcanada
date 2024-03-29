@@ -6,7 +6,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #000; /* Changed to black */
+     /* Changed to black */
     color: #fff; /* Ensure text color is visible on the black background */
     z-index: 1000;
     padding: 10px 20px;

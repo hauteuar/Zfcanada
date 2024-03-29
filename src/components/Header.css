@@ -1,0 +1,148 @@
+.site-header {
+    position: fixed; /* or fixed if you want it to be sticky */
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    z-index: 10;
+     /* Higher than the image z-index to stay on top */
+    border-bottom-left-radius: 20px; /* Curved bottom-left edge */
+    border-bottom-right-radius: 20px; /* Curved bottom-right edge */
+}
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    background: maroon; /* Dark red background */
+    color: white; /* White text color */
+    z-index: 10;
+    border-top-left-radius: 20px; /* Curved top-left edge if needed */
+    border-top-right-radius: 20px; /* Curved top-right edge if needed */
+}
+
+
+.navigation-bar {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    z-index: 15;
+    padding: 0;
+    background: transparent; /* Transparent background for navigation bar */
+    color: black;
+    margin-left: 5%; /* Start the links at 30% from the left */
+}
+
+.nav-links {
+    
+    display: flex;
+    align-items: center;
+}
+
+    .nav-links a {
+       
+        justify-content: space-between;
+        margin-right: 20px;
+        
+        display: flex;
+        text-decoration: none;
+        color: black;
+        
+        font-weight: bold;
+        position: relative; /* To position the hover effect line */
+    }
+
+        .nav-links a:hover::after {
+            content: ''; /* Essential for ::after to work */
+            display: block;
+            width: 100%;
+            height: 4px; /* Thickness of the underline */
+            background-color: darkred; /* Color of the underline */
+            position: absolute;
+            bottom: -5px; /* Adjust based on your link's line-height */
+            left: 0;
+        }
+/* Additional styles for dropdowns and responsive behavior */
+
+
+
+.contact-info a {
+    margin-left: 15px;
+    color: white;
+    text-decoration: double;
+}
+
+.phone-info a {
+    margin-left: 15px;
+    color: white;
+    text-decoration: double;
+}
+
+.logo-container img {
+    height: 150px; /* Adjust based on your logo's aspect ratio */
+    
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    
+    font-weight: bold;
+}
+
+dropdown:hover::after {
+    content: ''; /* Essential for ::after to work */
+    display: inline-flex;
+    width: 100%;
+    height: 10px; /* Thickness of the underline */
+    background-color: maroon; /* Color of the underline */
+    position: absolute;
+    bottom: -5px; /* Adjust based on your link's line-height */
+    left: 0;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    
+    box-shadow: 0px 15px 16px 0px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+    .dropdown-content a {
+        color: darkred;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+.dropdown:hover .dropdown-content::after {
+    content: ''; /* Essential for ::after to work */
+    display: inline-flex;
+    width: 100%;
+    height: 1px; /* Thickness of the underline */
+    background-color: maroon; /* Color of the underline */
+    position: absolute;
+    bottom: -5px; /* Adjust based on your link's line-height */
+    left: 0;
+}
+ 
+
+.arrow-down {
+    margin-left: 5px; /* Space between the link text and the arrow */
+}
+
+/* Optional: Adjust the dropdown link to change the arrow direction on hover */
+.dropdown:hover .arrow-down {
+    /* Example: Rotate arrow to point up */
+    transform: rotate(180deg); 
+    /* You might need to adjust positioning if you apply a transform */
+}
+
+/* Style adjustments for hover states and responsiveness go here */

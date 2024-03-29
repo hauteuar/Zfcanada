@@ -35,7 +35,7 @@ function DisplayNews() {
     };
 
     return (
-        <div id="news-alerts">
+        <div id="news-alerts" style={{marginTop:"10%"} }>
             <h1> Latest Canadian Immigration News and Alerts</h1>
             {articles.map((article) => (
                 <div key={article.id}>

@@ -1,0 +1,20 @@
+/* ImageSlider.css */
+.awssld__content h2.slider-caption {
+    position: absolute;
+    bottom: 20px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    color: #000; /* Dark color */
+    font-weight: bold; /* Bold font */
+    background: rgba(255, 255, 255, 0.5); /* Semi-transparent background for readability */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Hide scrollbar (if visible) */
+.awssld__wrapper {
+    overflow: hidden;
+}
+
+.awssld__controls__arrow {
+    display: none;
+}

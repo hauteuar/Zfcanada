@@ -1,0 +1,172 @@
+/* BackgroundChanger.css */
+.background-changer {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bg-image {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: top;
+    transition: transform 1s ease-in-out; /* Smooth transition for sliding effect */
+    transform: translateX(-100%); /* Start off-screen */
+}
+
+.slide-active {
+    transform: translateX(0); /* Slide in */
+}
+
+/* You might need to adjust this for the next image to slide in */
+.bg-image:not(.slide-active) {
+    transform: translateX(100%); /* Prepare to slide in from the right */
+}
+
+.bg-image-1 {
+    background-image: url('../public/images/BackgroundImage1.jpg');
+    animation-delay: 0s; /* Image 1 starts as visible */
+}
+
+.bg-image-2 {
+    background-image: url('../public/images/BackgroundImage2.jpg');
+    animation-delay: 30s; /* Delay = total cycle time / number of images */
+}
+
+.bg-image-3 {
+    background-image: url('../public/images/BackgroundImage3.jpg');
+    animation-delay: 60s;
+}
+
+.bg-image-4 {
+    background-image: url('../public/images/BackgroundImage4.jpg');
+    animation-delay: 90s;
+}
+
+/* Define the keyframes for the background change animation */
+@keyframes changeBackground {
+    0%, 100% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0;
+    }
+}
+
+/* Additional styles for your content */
+.content {
+    position: relative;
+    z-index: 2; /* Ensure content is above the background */
+    /* Rest of your content styling */
+}
+
+/* BackgroundChanger.css */
+/* BackgroundChanger.css */
+
+/* Common styles for all captions */
+/* BackgroundChanger.css */
+
+/* Common styles for all captions */
+.caption {
+    position: absolute;
+    font-size: 48px; /* Adjust size as needed */
+    font-weight: bold;
+    padding: 10px;
+    background: transparent;
+    color: transparent; /* Make text color transparent */
+    background-image: linear-gradient(to right, red 50%, white 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    display: inline;
+    cursor: default;
+}
+
+    /* Specific classes for color */
+    .caption.red {
+        color: red; /* Red text color */
+    }
+
+    .caption.white {
+        color: white; /* White text color */
+    }
+
+.right-bottom {
+    right: 20px;
+    top: 40px;
+    transform: translateY(-50%);
+}
+
+.left-middle {
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+}
+
+
+/* Add your existing .bg-image and animation styles here */
+.text-container {
+    position: relative;
+    text-align: left;
+    top: 50%;
+        /* Other styling as needed, possibly padding or dimensions */
+}
+
+.text-container_1 {
+    position: relative;
+    text-align: right;
+    top: 50%;
+    /* Other styling as needed, possibly padding or dimensions */
+}
+.main-heading {
+    font-size: 48px; /* or large enough to match your design */
+    color: white; /* assuming a white text color */
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* subtle shadow for depth */
+    margin-left: 20px;
+    margin-bottom: 20px; /* spacing between the elements */
+}
+.underline {
+    text-decoration: underline;
+    text-decoration-color: yellow; /* Choose color for the underline */
+    text-decoration-thickness: 2px; /* Choose thickness for the underline */
+    text-underline-offset: 3px; /* Adjust the position of the underline */
+}
+
+.ctar-button {
+    font-size: 30px; /* or as needed */
+    color: white; /* text color */
+    background-color: maroon; /* background color that stands out */
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    margin-left: 70px;
+    width: 30%;
+    font-weight: bold;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* consistent shadow style */
+    cursor: pointer; /* makes it clear it's a button */
+    border-radius: 5px; /* optional: if you want rounded corners */
+    outline: none; /* removes the outline to keep the design clean */
+}
+
+    .ctar-button:hover {
+        background-color: darkred; /* slightly darker on hover for feedback */
+    }
+
+.homepage-image-container img {
+    width: 100%;
+    height: auto; /* Or set a fixed height */
+    margin: 0;
+    top: 0;
+    object-fit: cover;
+    z-index: 5; /* If you want to cover the container's area without stretching */
+    /* Ensure z-index is less than .site-header if using position relative/absolute */
+}

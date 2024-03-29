@@ -1,0 +1,54 @@
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: auto;
+    max-width: 600px; /* Adjust based on your preference */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: white;
+    border-radius: 8px;
+}
+
+form {
+    width: 100%;
+    padding: 20px;
+}
+
+    form h2 {
+        margin-bottom: 20px;
+    }
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input, select, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px; /* Adjust spacing */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+.form-submitted {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 24px;
+    text-align: center;
+}
