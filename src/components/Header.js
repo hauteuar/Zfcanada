@@ -1,4 +1,5 @@
-﻿import React from 'react';
+
+import React from 'react';
 import './Header.css'; // Ensure you have a Header.css file with styles
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
@@ -55,7 +56,7 @@ const NavigationBar = () => {
                 <Link to="/news-alerts">NEWS & ALERTS</Link>
                     {/* Dropdown component can be further split if needed */}
                     <div className="dropdown">
-                    <p>IMMIGRATE ៴ </p>
+                    <p>IMMIGRATE </p>
                         <div className="dropdown-content">
                             <a href="/express-entry">Express Entry</a>
                         <a href="/atlantic-immigration">Atlantic Immigration Pilot Program</a>
@@ -65,7 +66,7 @@ const NavigationBar = () => {
                         </div>
                 </div>
                 <div className="dropdown" style={{ marginLeft:'15px' }}>
-                    <p>STUDY ៴ </p>
+                    <p>STUDY  </p>
                     <div className="dropdown-content">
                         <a href="/express-entry">Express Entry</a>
                         <a href="/atlantic-immigration">Atlantic Immigration Pilot Program</a>
@@ -75,7 +76,7 @@ const NavigationBar = () => {
                     </div>
                 </div>
                 <div className="dropdown" style={{ marginLeft: '15px' }}>
-                    <p>WORK ៴ </p>
+                    <p>WORK </p>
                     <div className="dropdown-content" >
                         <a href="/express-entry">Express Entry</a>
                         <a href="/atlantic-immigration">Atlantic Immigration Pilot Program</a>
@@ -85,7 +86,7 @@ const NavigationBar = () => {
                     </div>
                 </div>
                 <div className="dropdown" style={{ marginLeft: '15px' }}>
-                    <p>BUSINESS ៴ </p>
+                    <p>BUSINESS  </p>
                     <div className="dropdown-content" >
                         <a href="/express-entry">Express Entry</a>
                         <a href="/atlantic-immigration">Atlantic Immigration Pilot Program</a>
@@ -96,7 +97,7 @@ const NavigationBar = () => {
                 </div>
 
                 <div className="dropdown" style={{ marginLeft: '15px' }}>
-                    <p>SPONSORSHIP ៴ </p>
+                    <p>SPONSORSHIP </p>
                     <div className="dropdown-content" >
                         <a href="/express-entry">Express Entry</a>
                         <a href="/atlantic-immigration">Atlantic Immigration Pilot Program</a>
